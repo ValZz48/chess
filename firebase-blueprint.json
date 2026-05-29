@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile with ELO, XP, game stats, and credentials.",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string", "description": "The custom username." },
+        "password": { "type": "string", "description": "The user password." },
+        "elo": { "type": "integer", "description": "Current ELO rating points." },
+        "xp": { "type": "integer", "description": "Accumulated XP score." },
+        "unlockedThemes": { "type": "array", "description": "Unlocked theme names." },
+        "matchesPlayed": { "type": "integer", "description": "Number of matches played." },
+        "matchesWon": { "type": "integer", "description": "Number of matches won." },
+        "profileAvatar": { "type": "string", "description": "URL to the user avatar." },
+        "profileBio": { "type": "string", "description": "Slogan or small biography." },
+        "friends": { "type": "array", "description": "Array of friends usernames." },
+        "friendRequests": { "type": "array", "description": "Array of pending incoming friend request usernames." },
+        "inbox": { "type": "array", "description": "Array of notifications and game invites." }
+      },
+      "required": ["username", "password"]
+    }
+  },
+  "firestore": {
+    "users/{usernameId}": {
+      "schema": "User",
+      "description": "Information stored for each local user account index by lowercase username."
+    }
+  }
+}

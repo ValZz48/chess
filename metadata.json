@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Catur Nopal",
+  "description": "Platform catur modern terinspirasi Chess.com dengan bot AI legendaris, taktik teka-teki harian, pelajaran pembukaan, dan pertandingan online real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
